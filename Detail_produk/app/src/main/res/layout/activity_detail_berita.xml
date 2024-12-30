@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailBeritaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:id="@+id/imgBeritaDetail"
+            android:src="@drawable/bg_images_item"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tvJudulDetail"
+            android:text="Judul Berita"
+            android:textSize="25dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="20-09-2001"
+            android:gravity="center"
+            android:id="@+id/tvTglDetailBerita"
+            android:textSize="19dp"
+            android:layout_marginTop="10dp"/>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDetailRating"
+                android:layout_toStartOf="@id/DetailRatingBar"
+                android:text="5"
+                android:textStyle="bold"
+                android:textColor="@color/orange2"
+                android:layout_marginEnd="12dp"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/DetailRatingBar"
+                android:layout_alignParentEnd="true"
+                style="?android:attr/ratingBarStyleSmall"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:progressTint="@color/orange2"
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Isi Berita"
+            android:id="@+id/tvDetailIsiBerita"
+            android:textAlignment="textStart"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
